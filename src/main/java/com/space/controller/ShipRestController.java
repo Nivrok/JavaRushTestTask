@@ -206,14 +206,14 @@ public class ShipRestController {
             }
             if (after != null) {
                 Date dateAfter = new Date(after);
-                if (ship.getProdDate().getYear() < dateAfter.getYear()) {
+                if (ship.getProdDate().before(dateAfter)) {
                     it.remove();
                     continue;
                 }
             }
             if (before != null) {
                 Date dateBefore = new Date(before);
-                if (ship.getProdDate().getYear() > dateBefore.getYear()) {
+                if (ship.getProdDate().after(dateBefore)) {
                     it.remove();
                     continue;
                 }
@@ -333,14 +333,14 @@ public class ShipRestController {
             }
             if (after != null) {
                 Date dateAfter = new Date(after);
-                if (ship.getProdDate().getYear() < dateAfter.getYear()) {
+                if (ship.getProdDate().before(dateAfter)) {
                     it.remove();
                     continue;
                 }
             }
             if (before != null) {
                 Date dateBefore = new Date(before);
-                if (ship.getProdDate().getYear() > dateBefore.getYear()) {
+                if (ship.getProdDate().after(dateBefore)) {
                     it.remove();
                     continue;
                 }
